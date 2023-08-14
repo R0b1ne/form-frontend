@@ -23,13 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
         message,
       });
 
-      const { data } = await axios.post("http://localhost:3000/form", {
-        firstname,
-        lastname,
-        email,
-        subject,
-        message,
-      });
+      const { data } = await axios.post(
+        "https://site--form-backend--zqz8bqcfkwlv.code.run/form",
+        {
+          firstname,
+          lastname,
+          email,
+          subject,
+          message,
+        }
+      );
 
       // console.log("response>>", response.data);
       console.log("response =>", data);
